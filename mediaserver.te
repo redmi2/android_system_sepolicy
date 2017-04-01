@@ -126,6 +126,8 @@ allowxperm mediaserver self:{ rawip_socket tcp_socket udp_socket }
 allow mediaserver media_rw_data_file:dir create_dir_perms;
 allow mediaserver media_rw_data_file:file create_file_perms;
 
+allow mediaserver system_data_file:sock_file write;
+
 # Access to /data/preloads
 allow mediaserver preloads_data_file:file { getattr read ioctl };
 
