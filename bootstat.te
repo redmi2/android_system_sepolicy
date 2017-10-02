@@ -8,5 +8,7 @@ init_daemon_domain(bootstat)
 allow bootstat bootstat_data_file:dir rw_dir_perms;
 allow bootstat bootstat_data_file:file create_file_perms;
 
+allow bootstat rootfs:lnk_file getattr;
+
 # Read access to pseudo filesystems (for /proc/uptime).
 r_dir_file(bootstat, proc)
